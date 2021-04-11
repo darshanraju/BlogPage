@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
 import HeroImage from "../../assets/hero.webp";
+import siteData from "../../siteData";
 
 const styles = makeStyles({
   root: {
@@ -16,7 +17,6 @@ const styles = makeStyles({
   },
   heroText: {
     color: "white",
-
     fontSize: "5rem",
   },
 });
@@ -26,7 +26,7 @@ const Hero = () => {
   return (
     <div className={theme.root}>
       <Typography variant="h6" className={theme.heroText}>
-        Darshan's Blog
+        {siteData.heroTitle}
       </Typography>
     </div>
   );
