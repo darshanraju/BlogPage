@@ -54,7 +54,7 @@ const useStyles = makeStyles({
   bookmark: {
     "&:hover": {
       color: "#d6462d",
-      cursor: "pointer",
+      curser: "pointer",
     },
   },
 });
@@ -76,7 +76,7 @@ const ArticleCard = ({
 
   return (
     <>
-      <Grid item xs={12} sm={6} md={4} lg={3}>
+      <Grid item xs={12} sm={12} wrap="wrap" className="test">
         <Card className={classes.card}>
           <CardActionArea onClick={handleOpen}>
             <CardMedia

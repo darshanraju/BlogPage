@@ -47,6 +47,8 @@ const ArticleModal = ({
   const thumbsUp = () => setReview("up");
   const thumbsDown = () => setReview("down");
 
+  console.log("OPENING");
+
   return (
     <Dialog
       onClose={onClose}
