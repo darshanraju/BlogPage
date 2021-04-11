@@ -11,6 +11,12 @@ const siteData: websiteData = {
         "https://images.pexels.com/photos/3002028/pexels-photo-3002028.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
       shortDescription:
         "Brazil continues to burn the amazon forest, the lungs of our planet. Assuming all will be burnt, what will Earth look like in 10 years",
+      blogTextParagraphs: [
+        "This is paragraph 1",
+        "This is paragraph 2",
+        "This is paragraph 3",
+        "This is paragraph 4",
+      ],
     },
     {
       title: "Lungs of Earth.",
@@ -22,6 +28,12 @@ const siteData: websiteData = {
         "https://images.pexels.com/photos/3002028/pexels-photo-3002028.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
       shortDescription:
         "Brazil continues to burn the amazon forest, the lungs of our planet. Assuming all will be burnt, what will Earth look like in 10 years",
+      blogTextParagraphs: [
+        "This is paragraph 1",
+        "This is paragraph 2",
+        "This is paragraph 3",
+        "This is paragraph 4",
+      ],
     },
     {
       title: "Lungs of Earth.",
@@ -33,6 +45,12 @@ const siteData: websiteData = {
         "https://images.pexels.com/photos/3002028/pexels-photo-3002028.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
       shortDescription:
         "Brazil continues to burn the amazon forest, the lungs of our planet. Assuming all will be burnt, what will Earth look like in 10 years",
+      blogTextParagraphs: [
+        "This is paragraph 1",
+        "This is paragraph 2",
+        "This is paragraph 3",
+        "This is paragraph 4",
+      ],
     },
     {
       title: "Lungs of Earth.",
@@ -44,6 +62,12 @@ const siteData: websiteData = {
         "https://images.pexels.com/photos/3002028/pexels-photo-3002028.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
       shortDescription:
         "Brazil continues to burn the amazon forest, the lungs of our planet. Assuming all will be burnt, what will Earth look like in 10 years",
+      blogTextParagraphs: [
+        "This is paragraph 1",
+        "This is paragraph 2",
+        "This is paragraph 3",
+        "This is paragraph 4",
+      ],
     },
     {
       title: "Lungs of Earth.",
@@ -55,6 +79,12 @@ const siteData: websiteData = {
         "https://images.pexels.com/photos/3002028/pexels-photo-3002028.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
       shortDescription:
         "Brazil continues to burn the amazon forest, the lungs of our planet. Assuming all will be burnt, what will Earth look like in 10 years",
+      blogTextParagraphs: [
+        "This is paragraph 1",
+        "This is paragraph 2",
+        "This is paragraph 3",
+        "This is paragraph 4",
+      ],
     },
   ],
   podcasts: [],
@@ -75,6 +105,7 @@ export interface blog {
   authorImagePath: string;
   authorName: string;
   publishedDate: string;
+  blogTextParagraphs: Array<string>;
 }
 
 export interface podcast {

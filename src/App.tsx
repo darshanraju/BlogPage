@@ -19,6 +19,7 @@ const App = () => {
             authorName={blog.authorName}
             authorImagePath={blog.authorImagePath}
             publishedDate={blog.publishedDate}
+            blogTextParagraphs={blog.blogTextParagraphs}
           />
         ))}
       </Grid>
