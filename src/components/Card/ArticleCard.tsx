@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Grid,
   Card,
@@ -12,8 +13,9 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import BookmarkBorderIcon from "@material-ui/icons/BookmarkBorder";
 import { blog } from "../../siteData";
+import ArticleModal from "../ArticleModal/ArticleModal";
 
-const useStyles = makeStyles((theme: any) => ({
+const useStyles = makeStyles({
   appBar: {
     backgroundColor: "#fff",
   },
@@ -29,17 +31,6 @@ const useStyles = makeStyles((theme: any) => ({
     alignItems: "center",
     color: "#fff",
     fontSize: "4rem",
-    [theme.breakpoints.down("sm")]: {
-      height: 300,
-      fontSize: "3em",
-    },
-  },
-  blogsContainer: {
-    paddingTop: theme.spacing(3),
-  },
-  blogTitle: {
-    fontWeight: 800,
-    paddingBottom: theme.spacing(3),
   },
   card: {
     maxWidth: "100%",
@@ -60,7 +51,13 @@ const useStyles = makeStyles((theme: any) => ({
     display: "flex",
     justifyContent: "center",
   },
-}));
+  bookmark: {
+    "&:hover": {
+      color: "#d6462d",
+      cursor: "pointer",
+    },
+  },
+});
 
 const ArticleCard = ({
   title,
@@ -69,49 +66,62 @@ const ArticleCard = ({
   authorImagePath,
   authorName,
   publishedDate,
+  blogTextParagraphs,
 }: blog) => {
   const classes = useStyles();
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleClose = () => setOpenModal(false);
+  const handleOpen = () => setOpenModal(true);
 
   return (
-    <Grid item xs={12} sm={6} md={4} lg={3}>
-      <Card className={classes.card}>
-        <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image={imagePath}
-            title={title}
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {title}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {shortDescription}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions className={classes.cardActions}>
-          <Box className={classes.author}>
-            <Avatar src={authorImagePath} />
-            <Box ml={2}>
-              <Typography variant="subtitle2" component="p">
-                {authorName}
+    <>
+      <Grid item xs={12} sm={6} md={4} lg={3}>
+        <Card className={classes.card}>
+          <CardActionArea onClick={handleOpen}>
+            <CardMedia
+              className={classes.media}
+              image={imagePath}
+              title={title}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                {title}
               </Typography>
-              <Typography
-                variant="subtitle2"
-                color="textSecondary"
-                component="p"
-              >
-                {publishedDate}
+              <Typography variant="body2" color="textSecondary" component="p">
+                {shortDescription}
               </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions className={classes.cardActions}>
+            <Box className={classes.author}>
+              <Avatar src={authorImagePath} />
+              <Box ml={2}>
+                <Typography variant="subtitle2" component="p">
+                  {authorName}
+                </Typography>
+                <Typography
+                  variant="subtitle2"
+                  color="textSecondary"
+                  component="p"
+                >
+                  {publishedDate}
+                </Typography>
+              </Box>
             </Box>
-          </Box>
-          <Box>
-            <BookmarkBorderIcon />
-          </Box>
-        </CardActions>
-      </Card>
-    </Grid>
+            <Box>
+              <BookmarkBorderIcon className={classes.bookmark} />
+            </Box>
+          </CardActions>
+        </Card>
+      </Grid>
+      <ArticleModal
+        title={title}
+        paragraphs={blogTextParagraphs}
+        open={openModal}
+        onClose={handleClose}
+      />
+    </>
   );
 };
 

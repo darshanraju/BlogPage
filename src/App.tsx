@@ -2,11 +2,12 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import ArticleCard from "./components/Card/ArticleCard";
 import siteData from "./siteData";
-import { Grid } from "@material-ui/core";
+import { Grid, CssBaseline } from "@material-ui/core";
 
 const App = () => {
   return (
     <>
+      <CssBaseline />
       <Header />
       <Hero />
       <Grid container spacing={3}>
