@@ -12,6 +12,9 @@ const blogTheme = createMuiTheme({
     background: {
       default: "#0a192f",
     },
+    text: {
+      primary: "#ffff",
+    },
   },
 });
 //"#112240"
