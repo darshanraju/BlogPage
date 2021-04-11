@@ -5,14 +5,14 @@ const siteData: websiteData = {
   contributers: [],
 };
 
-interface websiteData {
+export interface websiteData {
   heroTitle: string;
   contributers: Array<participant>;
   blogs: Array<blog>;
   podcasts: Array<podcast>;
 }
 
-interface blog {
+export interface blog {
   blogImagePath: string;
   shortDescription: string;
   authorImagePath: string;
@@ -20,14 +20,14 @@ interface blog {
   publishedDate: string;
 }
 
-interface podcast {
+export interface podcast {
   podcastImagePath?: string;
   audioURLPath: string;
   shortDescription: string;
   participants: Array<string>;
 }
 
-interface participant {
+export interface participant {
   name: string;
   shortDescription: string;
 }
