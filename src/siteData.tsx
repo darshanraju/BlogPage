@@ -2,6 +2,7 @@ const siteData: websiteData = {
   heroTitle: "Darshan's Blog",
   blogs: [
     {
+      topic: "Philosophy",
       title: "Lungs of Earth.",
       authorImagePath:
         "https://images.pexels.com/photos/9291/nature-bird-flying-red.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -19,6 +20,7 @@ const siteData: websiteData = {
       ],
     },
     {
+      topic: "Computer Science",
       title: "Lungs of Earth.",
       authorImagePath:
         "https://images.pexels.com/photos/9291/nature-bird-flying-red.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -36,6 +38,7 @@ const siteData: websiteData = {
       ],
     },
     {
+      topic: "Philosophy",
       title: "Lungs of Earth.",
       authorImagePath:
         "https://images.pexels.com/photos/9291/nature-bird-flying-red.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -53,6 +56,7 @@ const siteData: websiteData = {
       ],
     },
     {
+      topic: "Math",
       title: "Lungs of Earth.",
       authorImagePath:
         "https://images.pexels.com/photos/9291/nature-bird-flying-red.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -70,6 +74,7 @@ const siteData: websiteData = {
       ],
     },
     {
+      topic: "Philosophy",
       title: "Lungs of Earth.",
       authorImagePath:
         "https://images.pexels.com/photos/9291/nature-bird-flying-red.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -91,6 +96,8 @@ const siteData: websiteData = {
   contributers: [],
 };
 
+export type content = "Math" | "Philosophy" | "Computer Science";
+
 export interface websiteData {
   heroTitle: string;
   contributers: Array<participant>;
@@ -99,6 +106,7 @@ export interface websiteData {
 }
 
 export interface blog {
+  topic: content;
   title: string;
   imagePath: string;
   shortDescription: string;

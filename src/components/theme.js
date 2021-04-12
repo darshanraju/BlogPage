@@ -14,5 +14,4 @@ const blogTheme = createMuiTheme({
     },
   },
 });
-//"#112240"
 export default blogTheme;

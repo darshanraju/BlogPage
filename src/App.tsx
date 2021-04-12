@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import ArticleCard from "./components/Card/ArticleCard";
-import siteData from "./siteData";
-import { Grid, CssBaseline, Typography, Box } from "@material-ui/core";
+import ArticleCard from "./components/Article/ArticleCard";
+import siteData, { content } from "./siteData";
+import { CssBaseline, Typography, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 const Fade = require("react-reveal/Fade");
 
@@ -27,37 +27,36 @@ const useStyles = makeStyles({
   },
 });
 
-const GenerateBlogCards = () => {
+const GenerateCards = ({ content }: GenerateCardsProps) => {
+  const toRender = siteData.blogs.filter((blog) => blog.topic === content);
   return (
-    <Fade duration={800} bottom>
-      {siteData.blogs.map((blog, idx) => (
-        <ArticleCard
-          key={idx}
-          title={blog.title}
-          shortDescription={blog.shortDescription}
-          imagePath={blog.imagePath}
-          authorName={blog.authorName}
-          authorImagePath={blog.authorImagePath}
-          publishedDate={blog.publishedDate}
-          blogTextParagraphs={blog.blogTextParagraphs}
-        />
-      ))}
-    </Fade>
+    <>
+      {toRender.length === 0 ? (
+        <div>Empty</div>
+      ) : (
+        toRender.map((blog, idx) => (
+          <Fade duration={800} bottom>
+            <ArticleCard
+              key={idx}
+              title={blog.title}
+              shortDescription={blog.shortDescription}
+              imagePath={blog.imagePath}
+              authorName={blog.authorName}
+              authorImagePath={blog.authorImagePath}
+              publishedDate={blog.publishedDate}
+              blogTextParagraphs={blog.blogTextParagraphs}
+              topic={blog.topic}
+            />
+          </Fade>
+        ))
+      )}
+    </>
   );
 };
 
 const App = () => {
   const styles = useStyles();
-  const [content, setContent] = useState<content>("Blogs");
-
-  const renderSwitch = () => {
-    switch (content) {
-      case "Blogs":
-        return <GenerateBlogCards />;
-      default:
-        break;
-    }
-  };
+  const [content, setContent] = useState<content>("Math");
 
   return (
     <>
@@ -69,11 +68,13 @@ const App = () => {
           {content}
         </Typography>
       </Fade>
-      <Box className={styles.cardContainer}>{renderSwitch()}</Box>
+      <Box className={styles.cardContainer}>{GenerateCards({ content })}</Box>
     </>
   );
 };
 
-export type content = "Blogs" | "Podcasts" | "Math" | "Philosophy" | "Music";
+interface GenerateCardsProps {
+  content: content;
+}
 
 export default App;

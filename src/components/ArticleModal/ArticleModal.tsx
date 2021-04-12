@@ -6,7 +6,6 @@ import {
   Typography,
   DialogActions,
   Button,
-  Box,
 } from "@material-ui/core/";
 import ThumbDownAltIcon from "@material-ui/icons/ThumbDownAlt";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
