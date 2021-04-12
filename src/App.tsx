@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import ArticleCard from "./components/Article/ArticleCard";
 import siteData, { content } from "./siteData";
-import { CssBaseline, Typography, Box } from "@material-ui/core";
+import { CssBaseline, Typography, Box, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 const Fade = require("react-reveal/Fade");
 
@@ -34,21 +34,23 @@ const GenerateCards = ({ content }: GenerateCardsProps) => {
       {toRender.length === 0 ? (
         <div>Empty</div>
       ) : (
-        toRender.map((blog, idx) => (
-          <Fade duration={800} bottom>
-            <ArticleCard
-              key={idx}
-              title={blog.title}
-              shortDescription={blog.shortDescription}
-              imagePath={blog.imagePath}
-              authorName={blog.authorName}
-              authorImagePath={blog.authorImagePath}
-              publishedDate={blog.publishedDate}
-              blogTextParagraphs={blog.blogTextParagraphs}
-              topic={blog.topic}
-            />
-          </Fade>
-        ))
+        <Grid item xs={6} sm={3}>
+          {toRender.map((blog, idx) => (
+            <Fade duration={800} bottom>
+              <ArticleCard
+                key={idx}
+                title={blog.title}
+                shortDescription={blog.shortDescription}
+                imagePath={blog.imagePath}
+                authorName={blog.authorName}
+                authorImagePath={blog.authorImagePath}
+                publishedDate={blog.publishedDate}
+                blogTextParagraphs={blog.blogTextParagraphs}
+                topic={blog.topic}
+              />
+            </Fade>
+          ))}
+        </Grid>
       )}
     </>
   );

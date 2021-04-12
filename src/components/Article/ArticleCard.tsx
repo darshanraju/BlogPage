@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  Grid,
   Card,
   CardActionArea,
   CardMedia,
@@ -57,6 +56,9 @@ const useStyles = makeStyles({
       curser: "pointer",
     },
   },
+  textContent: {
+    flexWrap: "wrap",
+  },
 });
 
 const ArticleCard = ({
@@ -76,45 +78,43 @@ const ArticleCard = ({
 
   return (
     <>
-      <Grid item xs={12} sm={12} wrap="wrap" className="test">
-        <Card className={classes.card}>
-          <CardActionArea onClick={handleOpen}>
-            <CardMedia
-              className={classes.media}
-              image={imagePath}
-              title={title}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                {title}
+      <Card className={classes.card}>
+        <CardActionArea onClick={handleOpen}>
+          <CardMedia
+            className={classes.media}
+            image={imagePath}
+            title={title}
+          />
+          <CardContent className={classes.textContent}>
+            <Typography gutterBottom variant="h5" component="h2">
+              {title}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {shortDescription}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions className={classes.cardActions}>
+          <Box className={classes.author}>
+            <Avatar src={authorImagePath} />
+            <Box ml={2}>
+              <Typography variant="subtitle2" component="p">
+                {authorName}
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {shortDescription}
+              <Typography
+                variant="subtitle2"
+                color="textSecondary"
+                component="p"
+              >
+                {publishedDate}
               </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions className={classes.cardActions}>
-            <Box className={classes.author}>
-              <Avatar src={authorImagePath} />
-              <Box ml={2}>
-                <Typography variant="subtitle2" component="p">
-                  {authorName}
-                </Typography>
-                <Typography
-                  variant="subtitle2"
-                  color="textSecondary"
-                  component="p"
-                >
-                  {publishedDate}
-                </Typography>
-              </Box>
             </Box>
-            <Box>
-              <BookmarkBorderIcon className={classes.bookmark} />
-            </Box>
-          </CardActions>
-        </Card>
-      </Grid>
+          </Box>
+          <Box>
+            <BookmarkBorderIcon className={classes.bookmark} />
+          </Box>
+        </CardActions>
+      </Card>
       <ArticleModal
         title={title}
         paragraphs={blogTextParagraphs}

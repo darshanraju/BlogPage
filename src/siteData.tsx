@@ -2,52 +2,16 @@ const siteData: websiteData = {
   heroTitle: "Darshan's Blog",
   blogs: [
     {
-      topic: "Philosophy",
-      title: "Lungs of Earth.",
+      topic: "Math",
+      title: "Fast Fourier Transform.",
       authorImagePath:
         "https://images.pexels.com/photos/9291/nature-bird-flying-red.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       authorName: "Darshan Raju",
-      publishedDate: "10 Dec 2019",
+      publishedDate: "TBA",
       imagePath:
-        "https://images.pexels.com/photos/3002028/pexels-photo-3002028.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+        "https://images.pexels.com/photos/415779/pexels-photo-415779.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       shortDescription:
-        "Brazil continues to burn the amazon forest, the lungs of our planet. Assuming all will be burnt, what will Earth look like in 10 years",
-      blogTextParagraphs: [
-        "This is paragraph 1",
-        "This is paragraph 2",
-        "This is paragraph 3",
-        "This is paragraph 4",
-      ],
-    },
-    {
-      topic: "Computer Science",
-      title: "Lungs of Earth.",
-      authorImagePath:
-        "https://images.pexels.com/photos/9291/nature-bird-flying-red.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      authorName: "Darshan Raju",
-      publishedDate: "10 Dec 2019",
-      imagePath:
-        "https://images.pexels.com/photos/3002028/pexels-photo-3002028.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-      shortDescription:
-        "Brazil continues to burn the amazon forest, the lungs of our planet. Assuming all will be burnt, what will Earth look like in 10 years",
-      blogTextParagraphs: [
-        "This is paragraph 1",
-        "This is paragraph 2",
-        "This is paragraph 3",
-        "This is paragraph 4",
-      ],
-    },
-    {
-      topic: "Philosophy",
-      title: "Lungs of Earth.",
-      authorImagePath:
-        "https://images.pexels.com/photos/9291/nature-bird-flying-red.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      authorName: "Darshan Raju",
-      publishedDate: "10 Dec 2019",
-      imagePath:
-        "https://images.pexels.com/photos/3002028/pexels-photo-3002028.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-      shortDescription:
-        "Brazil continues to burn the amazon forest, the lungs of our planet. Assuming all will be burnt, what will Earth look like in 10 years",
+        "Fourier analysis converts a signal from its original domain to a representation in the frequency domain and vice versa.",
       blogTextParagraphs: [
         "This is paragraph 1",
         "This is paragraph 2",
@@ -57,15 +21,15 @@ const siteData: websiteData = {
     },
     {
       topic: "Math",
-      title: "Lungs of Earth.",
+      title: "Burrows–Wheeler transform",
       authorImagePath:
         "https://images.pexels.com/photos/9291/nature-bird-flying-red.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       authorName: "Darshan Raju",
-      publishedDate: "10 Dec 2019",
+      publishedDate: "TBA",
       imagePath:
-        "https://images.pexels.com/photos/3002028/pexels-photo-3002028.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+        "https://images.pexels.com/photos/4031442/pexels-photo-4031442.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       shortDescription:
-        "Brazil continues to burn the amazon forest, the lungs of our planet. Assuming all will be burnt, what will Earth look like in 10 years",
+        "The Burrows–Wheeler transform rearranges a character string into runs of similar characters.",
       blogTextParagraphs: [
         "This is paragraph 1",
         "This is paragraph 2",
@@ -74,16 +38,33 @@ const siteData: websiteData = {
       ],
     },
     {
-      topic: "Philosophy",
-      title: "Lungs of Earth.",
+      topic: "Math",
+      title: "Recommendation Systems",
       authorImagePath:
         "https://images.pexels.com/photos/9291/nature-bird-flying-red.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       authorName: "Darshan Raju",
       publishedDate: "10 Dec 2019",
       imagePath:
-        "https://images.pexels.com/photos/3002028/pexels-photo-3002028.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+        "https://images.pexels.com/photos/987586/pexels-photo-987586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       shortDescription:
-        "Brazil continues to burn the amazon forest, the lungs of our planet. Assuming all will be burnt, what will Earth look like in 10 years",
+        " a recommendation system, is a subclass of information filtering system that seeks to predict the rating or preference a user would give to an item.",
+      blogTextParagraphs: [
+        "This is paragraph 1",
+        "This is paragraph 2",
+        "This is paragraph 3",
+        "This is paragraph 4",
+      ],
+    },
+    {
+      topic: "Computer Science",
+      title: "React Testing Library",
+      authorImagePath:
+        "https://images.pexels.com/photos/9291/nature-bird-flying-red.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      authorName: "Darshan Raju",
+      publishedDate: "10 Dec 2019",
+      imagePath:
+        "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      shortDescription: "",
       blogTextParagraphs: [
         "This is paragraph 1",
         "This is paragraph 2",
